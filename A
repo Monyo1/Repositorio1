@@ -1,0 +1,99 @@
+#Resumen recap de python, son solo unos picoteos, hay cosas que las escribi yo por lo q quizas no son tan buenas
+
+#### https://ehmatthes.github.io/pcc/cheatsheets/README.html
+
+
+##########FUNCIONES, 
+
+###Ejemplo funcion 
+
+###funcion dice si es par
+def es_par(numero):
+   divisor = 2
+   if numero % divisor == 0:
+      return True
+   else:
+      return False
+print(divisor)
+
+###funcion retorna	el	divisor	más	grande	de	un	número	n	dado	(excluyéndolo):
+
+def max_divisor(n):
+    maximo_actual = 0
+    i = 1
+    while i < n:
+        if n % i == 0:
+          maximo_actual = i
+        i += 1
+    return maximo_actual
+
+### max comun divisor
+def mcd(n1, n2):
+  maximo = 0
+  i = 1
+  while i < n1 and i < n2:
+    if n1 % i == 0 and n2 % i == 0:
+       maximo = i
+    i = i + 1
+  return maximo
+
+
+
+###reciba dos strings (de largo > 2) como parámetros, y retorne un string de largo 4 que consista de las dos primeras letras del primer string y las últimas dos letras del segundo.
+  def mezclador(string_a, string_b):
+    if len(string_a) > 2 and len(string_b) > 2:
+       return string_a[0:2] + string_b[-2] + string_b[-1]
+
+
+### reciba dos strings como parámetros y retorne un nuevo string que consista del primero, pero con el segundo string intercalado entre cada letra del primero.
+       
+   def intercalar(string_a, string_b):
+    palabra = ""
+    for i in range(0,len(string_a)):
+        palabra = palabra + string_a[i] + string_b 
+    return palabra
+
+### tring como parámetro y retorne el string, pero con cada elemento que estuviese en mayúsculas reemplazado por "$". Asuma que el string consistirá solamente de letras.
+
+### Por ejemplo si el string es "Viva la Vida", entonces tu función debe retornar "$iva la $ida".
+def reemplazo(string):
+  reemplazado = ""
+  for i in range(len(string)):
+      if string[i] == string[i].lower():
+          reemplazado = reemplazado + string[i]
+      else:
+          reemplazado = reemplazado + '$'
+  return reemplazado
+
+### cantidad de veces que un elemento elem se encuentra dentro de la lista conjunto.
+
+def cuantas(elem, conjunto):
+  contador = 0
+  for k in range(len(conjunto)):
+    if conjunto[k] == elem:
+      contador += 1
+  return contador
+
+
+tablero = [ [1,2,3], [4,5,6], [7,8,9] ]
+## para mostrar 1 4 7 2 5 8 3 6 9
+for j in range(3):
+  for i in range(3):
+    print(tablero[i][j],end=" ")
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
